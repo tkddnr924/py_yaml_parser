@@ -21,7 +21,7 @@ def read_test():
 
 def write_test():
     path = TEST_YAML_OUTPUT_PATH + str(random.randrange(1,100)) + ".yaml"
-    print path
+    
     for d in TEST_DICT:
         ym.write_yaml(path, d)
         print d
