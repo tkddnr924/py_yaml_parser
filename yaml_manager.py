@@ -10,3 +10,11 @@ def read_yaml(path, all=True):
     except Exception as e:
         print e
         sys.exit(1)
+
+def write_yaml(path, data, mode='a'):
+    try:
+        with open(path, mode) as f:
+            yaml.dump(data, f, explicit_start=True)
+    except Exception as e:
+        print e
+        sys.exit(1)
